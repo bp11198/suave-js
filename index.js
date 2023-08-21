@@ -19,4 +19,9 @@ const fillOutPaymentForm = (cardNumber, expirationDate, cardholderName, security
     let elsCVC = document.getElementsByName('creditCards[0].new_card_security_code');
     for (i = 0; i < elsCVC.length; i++)
         elsCVC[i].value = securityCode;
+    return true;
+}
+
+const isCheckout = () => {
+    return window.location.pathname === '/HotelCheckout';
 }
